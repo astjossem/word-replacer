@@ -30,13 +30,19 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
-	v = v.toLowerCase();
-	v = v.replace(/\bpresident trump\b/g, "Big Cheeto");
-	v = v.replace(/\Trump\b/g, "Cheeto");
-	v = v.replace(/\The Donald\b/g, "The Cheeto");
-	v = v.replace(/\Donald Trump\b/g, "Big Cheeto");
-	v = v.replace(/\Donald J Trump\b/g, "Big Fat Cheeto");
-	v = v.replace(/\Donald J. Trump\b/g, "Big Fat Cheeto");
+	v = v.replace(/\bpresident trump\b/gi, "Big Cheeto");
+	v = v.replace(/\president donald j. trump\b/gi, "Big Cheeto");
+	v = v.replace(/\president donald trump\b/gi, "Big Cheeto");
+	v = v.replace(/\president donald j trump\b/gi, "Big Cheeto");
+	v = v.replace(/\trump\b/gi, "Cheeto");
+	v = v.replace(/\the donald\b/gi, "The Cheeto");
+	v = v.replace(/\donald trump\b/gi, "Big Cheeto");
+	v = v.replace(/\donald j trump\b/gi, "Big Fat Cheeto");
+	v = v.replace(/\donald j. trump\b/gi, "Big Fat Cheeto");
+
+	v = v.replace(/\Obama\b/gi, "Obummer");
+	v = v.replace(/\Barack Obama\b/gi, "Barack Hussein Obama");
+
 	
 	textNode.nodeValue = v;
 }
