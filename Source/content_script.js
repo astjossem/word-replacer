@@ -30,16 +30,13 @@ function walk(node)
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
-
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
-	
-	v = v.replace(/\bSJW(s?)\b/ig, "skeleton$1");
-	v = v.replace(/\bsocjus\b/ig, "skeletonism");
-	v = v.replace(/\b(a)n (SJWs?)\b/ig, "$1 $2");
-	v = v.replace(/\b(s)ocial justice (warriors?)/ig, "$1keleton $2");
+	v = v.toLowerCase();
+	v = v.replace(/\bpresident trump\b/g, "Big Cheeto");
+	v = v.replace(/\Trump\b/g, "Cheeto");
+	v = v.replace(/\The Donald\b/g, "The Cheeto");
+	v = v.replace(/\Donald Trump\b/g, "Big Cheeto");
+	v = v.replace(/\Donald J Trump\b/g, "Big Fat Cheeto");
+	v = v.replace(/\Donald J. Trump\b/g, "Big Fat Cheeto");
 	
 	textNode.nodeValue = v;
 }
