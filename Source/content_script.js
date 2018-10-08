@@ -34,13 +34,13 @@ function handleText(textNode){
 	v = v.replace(/\trump\b/gi, "Cheeto");
 	v = v.replace(/\the donald\b/gi, "The Cheeto");
 	v = v.replace(/\donald trump\b/gi, "Big Cheeto");
-	v = v.replace(/\donald j trump\b/gi, "Big Fat Cheeto");
-	v = v.replace(/\donald j. trump\b/gi, "Big Fat Cheeto");
+	v = v.replace(/\donald j trump\b/gi, "Big Cheeto");
+	v = v.replace(/\donald j. trump\b/gi, "Big Cheeto");
 
-	v = v.replace(/\Obama\b/gi, "Obummer");
-	v = v.replace(/\Barack Obama\b/gi, "Barack Hussein Obama");
-	v = v.replace(/\President Obama\b/gi, "President Obummer");
-	v = v.replace(/\President Barack Obama\b/gi, "President Barack Hussein Obama");
+//	v = v.replace(/\Obama\b/gi, "Obummer");
+//	v = v.replace(/\Barack Obama\b/gi, "Barack Hussein Obama");
+//	v = v.replace(/\President Obama\b/gi, "President Obummer");
+//	v = v.replace(/\President Barack Obama\b/gi, "President Barack Hussein Obama");
 	
 	textNode.nodeValue = v;
 }
