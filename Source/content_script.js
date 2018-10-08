@@ -1,20 +1,18 @@
 walk(document.body);
 
-function walk(node) 
-{
-	// I stole this function from here:
+function walk(node){
+
+	// DOM traversal inspired from: T.J. Crowder on
 	// http://is.gd/mwZp7E
 	
 	var child, next;
 
-	switch ( node.nodeType )  
-	{
+	switch ( node.nodeType ){
 		case 1:  // Element
 		case 9:  // Document
 		case 11: // Document fragment
 			child = node.firstChild;
-			while ( child ) 
-			{
+			while ( child )	{
 				next = child.nextSibling;
 				walk(child);
 				child = next;
@@ -27,8 +25,7 @@ function walk(node)
 	}
 }
 
-function handleText(textNode) 
-{
+function handleText(textNode){
 	var v = textNode.nodeValue;
 	v = v.replace(/\bpresident trump\b/gi, "Big Cheeto");
 	v = v.replace(/\president donald j. trump\b/gi, "Big Cheeto");
@@ -42,9 +39,8 @@ function handleText(textNode)
 
 	v = v.replace(/\Obama\b/gi, "Obummer");
 	v = v.replace(/\Barack Obama\b/gi, "Barack Hussein Obama");
-
+	v = v.replace(/\President Obama\b/gi, "President Obummer");
+	v = v.replace(/\President Barack Obama\b/gi, "President Barack Hussein Obama");
 	
 	textNode.nodeValue = v;
 }
-
-
