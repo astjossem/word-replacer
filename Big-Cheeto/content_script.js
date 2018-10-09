@@ -35,6 +35,8 @@ function handleText(textNode){
 	v = v.replace(/\bdonald j cheeto\b/gi, "Big Cheeto");
 	v = v.replace(/\btrumps\b/gi, "Cheeto Clan");
 	v = v.replace(/\btrumpism\b/gi, "Cheeto Fingers");
+	v = v.replace(/\b@realdonaldtrump\b/gi, "@realBigCheeto");
+	v = v.replace(/\bivanka\b/gi, "Flaming Hot");
 
 //	v = v.replace(/\Obama\b/gi, "Obummer");
 //	v = v.replace(/\Barack Obama\b/gi, "Barack Hussein Obama");
