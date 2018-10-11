@@ -1,3 +1,4 @@
+handleText(document.title);
 walk(document.body);
 
 function walk(node){
